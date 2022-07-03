@@ -10,9 +10,9 @@ class CounterContainer extends Component {
         this.state = {
             // parityType: "even",
             countValue:0,
-        } /* автоматически завели наше состояние; конструктор класса, который устанавливает начальное состояние в this.state*/
+        }
     }
-    /*все методы, которые будут вызываться на пользовательские действия: клик, изменения инпута, должны начинаться со слова handle */
+   
 
     handleIncrement = () => {
         this.setState( (state) => {
@@ -41,13 +41,7 @@ class CounterContainer extends Component {
             }
         })
     }
-    // handleParity = () => {
-    //     return this.setState ((state) => {
-    //         if (state.countValue % 2 !== 0) {
-    //             return this.state ={parityType:"odd"}
-    //         }
-    //     })
-    // }
+
 
 
 
@@ -58,12 +52,11 @@ class CounterContainer extends Component {
         return (
             <div>
                <CounterView
-                   // parityType={this.state.parityType}
+                  
                    countValue={this.state.countValue}
                    handleIncrement = {this.handleIncrement}
                    handleDecrement = {this.handleDecrement}
                    handleReset = {this.handleReset}
-                   // handleParity={this.handleParity}
                />
 
             </div>
